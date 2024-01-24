@@ -1,0 +1,13 @@
+#increase shard allocation speed 
+PUT _cluster/settings 
+{
+    "persistent" : {
+        
+        "cluster.routing.allocation.cluster_concurrent_rebalance": 20,
+        "cluster.routing.allocation.node_concurrent_recoveries": 20
+    },
+    "transient": {
+        "cluster.routing.allocation.cluster_concurrent_rebalance": 20,
+        "cluster.routing.allocation.node_concurrent_recoveries": 20
+    }
+}
