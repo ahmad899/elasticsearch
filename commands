@@ -3,11 +3,23 @@ PUT _cluster/settings
 {
     "persistent" : {
         
-        "cluster.routing.allocation.cluster_concurrent_rebalance": 20,
-        "cluster.routing.allocation.node_concurrent_recoveries": 20
+        "cluster.routing.allocation.cluster_concurrent_rebalance": 10,
+        "cluster.routing.allocation.node_concurrent_recoveries": 10,
+        "cluster.routing.allocation.node_concurrent_incoming_recoveries": 10,
+        "cluster.routing.allocation.node_concurrent_outgoing_recoveries": 10,
+        "cluster.routing.allocation.node_initial_primaries_recoveries": 10,
+        "indices.recovery.max_bytes_per_sec": "90mb",
+        "cluster.max_shards_per_node": 10000,
+        "cluster.routing.allocation.enable": "none"
     },
     "transient": {
-        "cluster.routing.allocation.cluster_concurrent_rebalance": 20,
-        "cluster.routing.allocation.node_concurrent_recoveries": 20
+        "cluster.routing.allocation.cluster_concurrent_rebalance": 10,
+        "cluster.routing.allocation.node_concurrent_recoveries": 10,
+        "cluster.routing.allocation.node_concurrent_incoming_recoveries": 10,
+        "cluster.routing.allocation.node_concurrent_outgoing_recoveries": 10,
+        "cluster.routing.allocation.node_initial_primaries_recoveries": 10,
+        "indices.recovery.max_bytes_per_sec": "90mb",
+        "cluster.max_shards_per_node": 10000,
+        "cluster.routing.allocation.enable": "none"
     }
 }
